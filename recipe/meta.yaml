@@ -30,6 +30,7 @@ requirements:
     - python >=3.8
     - typing-extensions
     - useq-schema
+    - wrapt
 
 test:
   imports:

@@ -20,17 +20,19 @@ requirements:
     - python >=3.8
     - setuptools-scm
   run:
-    - loguru
-    - msgpack-python
-    - numpy
-    - psutil
-    - psygnal
-    - pymmcore >=10.1.1.70.4
-    - pyro5 >=5.10
     - python >=3.8
+    - loguru
+    - numpy
+    - psygnal >=0.4.2
+    - pymmcore >=10.1.1.70.4
     - typing-extensions
     - useq-schema
     - wrapt
+
+    # Remote stuff
+    # - pyro5 >=5.10
+    # - msgpack-python
+    # - psutil
 
 test:
   imports:

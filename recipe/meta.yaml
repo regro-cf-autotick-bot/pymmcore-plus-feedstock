@@ -18,7 +18,8 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools-scm
+    - hatchling
+    - hatch-vcs
   run:
     - python >=3.8
     - loguru

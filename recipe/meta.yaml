@@ -21,11 +21,14 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
-    - python >=3.8
+    - appdirs
     - loguru
     - numpy
     - psygnal >=0.4.2
     - pymmcore >=10.1.1.70.4
+    - python >=3.8
+    - rich
+    - typer
     - typing-extensions
     - useq-schema
     - wrapt

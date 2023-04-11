@@ -1,11 +1,11 @@
-About pymmcore-plus
-===================
+About pymmcore-plus-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymmcore-plus-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tlambert03/pymmcore-plus
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymmcore-plus-feedstock/blob/main/LICENSE.txt)
 
 Summary: Control pymmcore (micro-manager) in another process
 

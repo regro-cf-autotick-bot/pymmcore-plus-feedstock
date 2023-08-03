@@ -3,13 +3,13 @@ About pymmcore-plus-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymmcore-plus-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/tlambert03/pymmcore-plus
+Home: https://pypi.org/project/pymmcore-plus
 
 Package license: BSD-3-Clause
 
-Summary: Control pymmcore (micro-manager) in another process
+Summary: A convenience layer on pymmcore (micro-manager) providing improved python UX and event management
 
-Development: https://github.com/tlambert03/pymmcore-plus
+Development: https://github.com/pymmcore-plus/pymmcore-plus
 
 Current build status
 ====================

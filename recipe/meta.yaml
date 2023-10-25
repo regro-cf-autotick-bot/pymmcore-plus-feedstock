@@ -22,11 +22,11 @@ requirements:
     - python >=3.8
   run:
     - appdirs
-    - loguru >=0.5.0
     - numpy
     - psygnal >=0.4.2
     - pymmcore >=10.1.1.70.4
     - python >=3.8
+    - qtpy
     - rich >=10.2.0
     - typer >=0.4.2
     - typing-extensions

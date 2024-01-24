@@ -1,5 +1,5 @@
 {% set name = "pymmcore-plus" %}
-{% set version = "0.8.5" %}
+{% set version = "0.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymmcore_plus-{{ version }}.tar.gz
-  sha256: fac984e9f0a8a89b90e37b49d5df2c5f2e10db8728b124fa68534be19fac572e
+  sha256: ca4d71a94a8820f53d21aaa88d13ab65b8b1594c02e97e5dcd4b92fdb3fd9a9a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   entry_points:
     - mmcore = pymmcore_plus._cli:main
 

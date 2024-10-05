@@ -1,5 +1,5 @@
 {% set name = "pymmcore-plus" %}
-{% set version = "0.9.5" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymmcore_plus-{{ version }}.tar.gz
-  sha256: 950c23beb5f39c7f8cd2591a30983706e19f7f18da5dba2723ddfb7de5d99de0
+  sha256: f2c7e4d415f279a939e5d716d1e668d4b5c9665a726c6de8cbc41803673c7175
 
 build:
   noarch: python
@@ -34,6 +34,7 @@ requirements:
     - typing-extensions
     - useq-schema >=0.4.7
     - wrapt >=1.14
+    - tensorstore
 
 test:
   imports:

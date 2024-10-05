@@ -34,6 +34,7 @@ requirements:
     - typing-extensions
     - useq-schema >=0.4.7
     - wrapt >=1.14
+    - tensorstore
 
 test:
   imports:

@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymmcore_plus-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pymmcore_plus-{{ version }}.tar.gz
   sha256: 9971d596ffc6357a6f42b1193be3c8abd6ef786ab308ffeb8d13ca35785c5286
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - mmcore = pymmcore_plus._cli:main
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatch-vcs
     - hatchling
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - platformdirs >=3.0.0
     - psygnal >=0.7.0
@@ -44,6 +44,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/pymmcore-plus

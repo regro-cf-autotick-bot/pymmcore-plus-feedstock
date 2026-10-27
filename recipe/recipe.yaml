@@ -1,0 +1,70 @@
+schema_version: 1
+
+context:
+  name: pymmcore-plus
+  version: "0.18.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymmcore_plus-${{ version }}.tar.gz
+  sha256: 6f435d61034d7e0b854c7dd74d222d195aa5c82d5698eb1ac90a88260d33668d
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - mmcore = pymmcore_plus._cli:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatch-vcs
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - numpy >=1.25.2
+    - ome-types >=0.6.0
+    - ome-writers >=0.3.0
+    - platformdirs >=3.0.0
+    - psygnal >=0.10
+    - pymmcore >=11.10.0.74.0
+    - qtpy >=2
+    - rich >=10.2.0
+    - typer >=0.13.0
+    - typing-extensions >=4
+    - useq-schema >=0.9
+    # via ome-writers[tensorstore]
+    - tensorstore >=0.1.80
+
+tests:
+  - python:
+      imports:
+        - pymmcore_plus
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip list
+
+about:
+  summary: A convenience layer on pymmcore (micro-manager) providing improved python UX and event management
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://pypi.org/project/pymmcore-plus
+  repository: https://github.com/pymmcore-plus/pymmcore-plus
+
+extra:
+  recipe-maintainers:
+    - goanpeca
+    - tlambert03
